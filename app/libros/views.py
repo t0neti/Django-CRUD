@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+# app/libros/views.py
+
+from django.http import JsonResponse
+
+def ping(request):
+    data = {"ping": "pong!"}
+    return JsonResponse(data)
